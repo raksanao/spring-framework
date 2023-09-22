@@ -15,11 +15,14 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td>Mike</td>
-        <td>Smith</td>
-        <td>45</td>
-        <td>MALE</td>
+
+
+
+    <tr th:each="mentor:${mentor}">
+        <td th:text="${mentor.firstName}"></td>
+        <td th:text="${mentor.lastName}"></td>
+        <td th:text="${mentor.age}"></td>
+        <td th:text="${mentor.gender}"></td>
     </tr>
     <tr>
         <td>Tom</td>
