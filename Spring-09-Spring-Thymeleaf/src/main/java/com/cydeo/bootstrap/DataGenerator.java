@@ -2,6 +2,7 @@ package com.cydeo.bootstrap;
 
 import com.cydeo.model.Student;
 import com.github.javafaker.Faker;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Arrays;
