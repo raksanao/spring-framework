@@ -8,16 +8,18 @@ import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-@Entity// we want to create table from it
+@Entity
 @Table(name = "departments")
-@Data
 @NoArgsConstructor
+@Data
+public class Department extends BaseEntity {
 
-public class Department extends  BaseEntity{//baseEntity for common field in both table
     private String department;
     private String division;
-    @OneToOne(mappedBy = "department_id")
-    private  Employee employee;
+
+    @OneToOne(mappedBy = "department")
+    private Employee employee;
+
     public Department(String department, String division) {
         this.department = department;
         this.division = division;
