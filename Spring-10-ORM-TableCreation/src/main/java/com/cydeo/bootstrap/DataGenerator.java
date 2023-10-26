@@ -11,7 +11,7 @@ public class DataGenerator implements CommandLineRunner {
         this.carRepository = carRepository;
     }
 
-    CarRepository carRepository;
+    CarRepository carRepository;//we need to inject it becouse we need to call save from carRepository
     @Override
     public void run(String... args) throws Exception {
         Car c1=new Car("BMV","M5");
